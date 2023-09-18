@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <app-opacity (rangeValue)="rangeValue = $event" id="opacity"></app-opacity>
+    <h1><app-titulos [titulo]="tituloValueDesigned" id="TituloComponente"></app-titulos></h1>
+    <div class="container" id="ctnGral">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let book of books; let i = index" [ngClass]="'card-fixed-size'">
+
+                <div class="card" [ngStyle]="{'width': '21rem', 'opacity':rangeValue }">
+                    <div class="container" [hidden]="book.hiddenOrVisible" id="ctnImagen">
+                        <app-book-imagen [book]="book"></app-book-imagen>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" [hidden]="book.hiddenOrVisible">{{book.name}}</h5>
+                        <p class="card-text" [hidden]="book.hiddenOrVisible">
+                            {{book.description}}
+                        </p>
+                    </div>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" [hidden]="book.hiddenOrVisible">{{book.author}}</li>
+                        <li class="list-group-item" [hidden]="book.hiddenOrVisible">{{book.category}}</li>
+                        <li class="list-group-item" [hidden]="book.hiddenOrVisible">{{book.releaseYear}}
+                            <button type="button" [hidden]="book.hiddenOrVisible" class="btn btn-outline-warning"
+                                (click)="yearPlus(book.releaseYear,i)">+1</button> {{book.releaseYear | antiguedad}}
+                        </li>
+                        <li class="list-group-item"> Ocultar <input type="checkbox" (change)="cbxHidden($event,i)">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

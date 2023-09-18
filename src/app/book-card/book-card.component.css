@@ -1,0 +1,36 @@
+/* Agrega los estilos a tu contenedor principal */
+#ctnGral
+
+  
+  /* Agrega los estilos al contenedor de la tarjeta */
+  .card-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #ctnImagen{
+    max-width: 60%;
+    height: auto;
+}
+#ctnImagen app-book-imagen {
+  max-width: 100%;
+  height: auto;
+}
+.card-fixed-size {
+  width:400px; /* El ancho deseado para las tarjetas */
+  height: 770px; /* La altura deseada para las tarjetas */
+}
+.card {
+  height: 725px; /* Altura fija para todas las tarjetas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content {
+  max-height: 600px; /* Altura máxima para el contenido dentro de la tarjeta */
+  overflow: hidden;
+}
+#opacity{
+  
+}
