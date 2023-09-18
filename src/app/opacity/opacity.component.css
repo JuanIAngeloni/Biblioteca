@@ -1,0 +1,8 @@
+#customRange1 {
+    transform: rotate(270deg);  
+    width: 100px;
+    background-color: rgb(196, 196, 196);
+    position: sticky;
+    top:600px;
+    right: 200px !important;
+}
