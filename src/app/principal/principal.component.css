@@ -1,0 +1,18 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#TituloBiblioteca{
+    color:whitesmoke;
+    text-align: center;
+    margin: 0 auto;
+}
+#ctnBiblioteca{
+    background-color:blue;
+    border: 1px solid red;
+
+
+}
+ /*     }*/
